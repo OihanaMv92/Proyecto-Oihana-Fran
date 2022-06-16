@@ -1,0 +1,25 @@
+<div class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-4 mx-auto">
+            <h2 class="text-center mb-5">Iniciar sesión</h2>
+
+
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label class="text-muted">Usuario:</label>
+                    <input name="nombre" type="text" [(ngModel)]="nombre" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="text-muted">Contraseña:</label>
+                    <input name="contrasena" type="password" [(ngModel)]="contrasena" class="form-control">
+                </div>
+                <a [routerLink]="['/registrarse']">Prefiero registrarme.</a>
+                <p class="error">{{login_message}}</p>
+                <div class="mb-3">
+                    <button class="w-100 btn btn-success" (click)="iniciarsesion()">Aceptar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

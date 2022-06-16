@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@font-face {
+    font-family: ReactiveAnchor;
+    src: url("./fonts/ReactiveAnchor.ttf");
+}
+
+html,
+body {
+    margin: 0;
+    background-color: #343233;
+    color: whitesmoke;
+}
+
+h1 {
+    font-family: ReactiveAnchor;
+    /* font-size: 30px !important; */
+}
+
+h2,
+a,
+button,
+p {
+    /* font-family: 'Grape Nuts', cursive !important; */
+    /* font-family: 'Indie Flower', cursive !important; */
+    /* font-family: 'Amatic SC', cursive !important; */
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.creditos {
+    font-size: 12px;
+    color: #EFDAB9;
+}
+
+.error {
+    margin-top: 16px;
+    height: 16px;
+    font-size: 14px;
+    color: red;
+}
+
+.btn-primero {
+    background-color: #FFD152;
+    border: 2px solid #FFD152;
+    padding: 10px 0 !important;
+    font-size: 18px;
+}
+
+.btn-normal {
+    color: #EFDAB9;
+    border: 1px solid #EFDAB9;
+    padding: 10px 0 !important;
+    font-size: 18px;
+}

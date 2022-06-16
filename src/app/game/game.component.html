@@ -1,0 +1,80 @@
+<div class="vh-100 overflow-hidden position-relative">
+
+    <div class="play h-66">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="h-100 position-relative w-100" (click)="play_music()">
+                <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+                    <div class='{{clase_play_button}}'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons h-33 position-relative">
+        <p class="text-center position-absolute w-100">Pregunta número {{indicepartida+1}}</p>
+        <div class="h-25 d-flex align-items-end justify-content-center row">
+            <div class="bg-primary rounded-pill px-3 py-2 text-light col-8 col-md-6 text-center">
+                <p class="m-0 fs-3">¿Qué canción es?</p>
+            </div>
+        </div>
+        <div class="h-75 d-flex align-items-center">
+
+            <div class=" container text-center">
+                <div class="row ">
+                    <div class="col-12 col-md-6">
+                        <div class="rounded-pill px-3 py-2 text-light mb-3 respuesta {{colorrespuestas[0]}}" (click)="responder(0)">{{posiblesrespuestas[0]}}</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="rounded-pill px-3 py-2 text-light mb-3 respuesta {{colorrespuestas[1]}}" (click)="responder(1)">{{posiblesrespuestas[1]}}</div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12 col-md-6">
+                        <div class="rounded-pill px-3 py-2 text-light mb-3 respuesta {{colorrespuestas[2]}}" (click)="responder(2)">{{posiblesrespuestas[2]}}</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="rounded-pill px-3 py-2 text-light mb-3 respuesta {{colorrespuestas[3]}}" (click)="responder(3)">{{posiblesrespuestas[3]}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-top top-0 left-0 vw-100 vh-100 bg-dark bg-opacity-75" *ngIf="partidaterminada">
+    <div class="h-100 w-100 position-relative row">
+        <div class="position-absolute bg-white top-50 start-50 translate-middle col-6 p-0">
+            <div class="">
+                <div class="px-3">
+                    <h2 class="text-dark p-3 text-center">Game Over!</h2>
+                    <p>Estadisticas:</p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Canción</th>
+                                <th>Respuesta</th>
+                                <th>Puntos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let respuesta of respuestasrespondidas">
+                                <td>{{getcancion(respuesta.idcancion).titulo}}</td>
+                                <td>{{getcancion(respuesta.idcancionrespuesta).titulo}}</td>
+                                <td>{{respuesta.puntos}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>{{this.puntostotal}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d-flex">
+                    <button [routerLink]="['/']" class="btn btn-danger rounded-0 w-100">Salir</button>
+                    <!-- <a href="./game" class="btn btn-success rounded-0 w-50">Jugar de nuevo</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

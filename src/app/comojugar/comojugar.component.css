@@ -1,0 +1,12 @@
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+.comojugar img {
+    box-shadow: 0 0 5px rgba(248, 248, 248, 0.226);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 50%;
+    display: block;
+}

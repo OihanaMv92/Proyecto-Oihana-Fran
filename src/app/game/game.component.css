@@ -1,0 +1,92 @@
+.navbar {
+    /* background-color: rgb(94, 0, 0) !important; */
+}
+
+.h-66 {
+    height: calc((100vh / 100) * 55);
+}
+
+.imagen {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../assets/play.png");
+    background-size: cover;
+}
+
+.h-33 {
+    height: calc((100vh / 100) * 45);
+}
+
+.playbutton:hover {
+    border-color: transparent transparent transparent #fafafa;
+}
+
+.playbutton {
+    width: 30vh;
+    height: 30vh;
+    background-size: cover;
+    background-image: url("../../assets/play1.png");
+    /* border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #ebebeb;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px; */
+    /* top: 50%;
+    left: 50%; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-40%, -85%); */
+}
+
+.pausedbutton {
+    width: 30vh;
+    height: 30vh;
+    background-size: cover;
+    background-image: url("../../assets/play2.png");
+    /* border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent #ebebeb;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 60px; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-40%, -85%);
+    -webkit-transform: translate(-40%, -85%);
+    -moz-transform: translate(-40%, -85%);
+    -ms-transform: translate(-40%, -85%);
+    -o-transform: translate(-40%, -85%); */
+}
+
+.respuesta {
+    background-color: #1673ff;
+    cursor: pointer;
+}
+
+.rojo {
+    background-color: red !important;
+}
+
+.verde {
+    background-color: green !important;
+}
+
+
+/* laptop */
+
+@media (min-width: 992px) {
+    .pausedbutton,
+    .playbutton {
+        width: 40vh;
+        height: 40vh;
+    }
+}

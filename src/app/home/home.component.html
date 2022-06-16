@@ -1,0 +1,22 @@
+<div class="vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5 mx-auto">
+            <h2 class="text-center mb-5">¡Hola {{this.nombreusuario}}!</h2>
+            <div class="mb-3">
+                <button class="w-100 btn btn-primero" [routerLink]="['/game']">Jugar!</button>
+            </div>
+            <div class="mb-3">
+                <button class="w-100 btn btn-normal" [routerLink]="['/ranking']">Ranking</button>
+            </div>
+            <div class="mb-3">
+                <button class="w-100 btn btn-normal" [routerLink]="['/comojugar']">¿Cómo jugar?</button>
+            </div>
+            <div class="mb-3">
+                <button class="w-100 btn btn-normal" (click)="cerrarsesion()">Salir</button>
+            </div>
+            <div class="mb-3">
+                <p class="creditos text-center">Fran & Oihana</p>
+            </div>
+        </div>
+    </div>
+</div>
